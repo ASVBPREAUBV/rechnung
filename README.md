@@ -1,2 +1,16 @@
-# rechnung
-Application to create PDF-invoice Files from local Webpage
+# rechnung PDF
+
+## Installation
+```
+npm install
+```
+
+## Development
+```
+npm run dev
+```
+
+## Production 
+```
+npm start
+```
