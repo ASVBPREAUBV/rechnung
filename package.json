@@ -1,0 +1,23 @@
+{
+  "name": "rechnung-pdf",
+  "version": "0.0.1",
+  "description": "Application to create PDF-invoice Files from local Webpage",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "PORT=3000 node src/index.js",
+    "dev": "PORT=3000 ./node_modules/.bin/nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "phantom": "^6.0.3",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=10.10.0"
+  }
+}
