@@ -3,29 +3,22 @@ html(lang='de')
     head
         meta(charset='utf-8')
         link(rel="stylesheet" type="text/css" href="static/css/style.css")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
     body
         #page-wrap
-            textarea#header INVOICE
-            | &#x9;&#x9;
-            | &#x9;&#x9;
+            #header INVOICE
             #identity
-                textarea#address
-                    | #{config.name}
-                    | #{config.street}
-                    | #{config.city}
-                    | #{config.phone}
+                #address
+                    p #{config.name}
+                    p #{config.street}
+                    p #{config.city}
+                    p #{config.phone}
                 #logo
                     img#image(src='static/img/your-logo.png', alt='logo')
-            | &#x9;&#x9;
-            | &#x9;&#x9;
-            div(style='clear:both')
-            | &#x9;&#x9;
-            | &#x9;&#x9;
             #customer
-                textarea#customer-title
-                    | Widget Corp.
-                    | c/o Steve Widget
-                |
+                #title
+                    p Widget Corp.
+                    p c/o Steve Widget
                 table#meta
                     tr
                         td.meta-head Invoice #
