@@ -33,12 +33,10 @@ table td, table th {
 #identity {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-#address {
-    width: 250px;
-    height: 150px;
-}
 
 #logo {
     text-align: right;
