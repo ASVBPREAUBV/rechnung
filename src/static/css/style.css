@@ -71,10 +71,6 @@ table td, table th {
     height: 50px;
 }
 
-#items tr.item-row td {
-    border: 0;
-    vertical-align: top;
-}
 
 #items td.description {
     width: 300px;
