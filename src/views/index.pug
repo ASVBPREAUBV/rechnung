@@ -2,7 +2,141 @@ doctype html
 html(lang='de')
     head
         meta(charset='utf-8')
-        link(rel="stylesheet" type="text/css" href="static/css/index.css")
-
+        link(rel="stylesheet" type="text/css" href="static/css/style.css")
     body
-        h1 Index #{head}
+        #page-wrap
+            textarea#header INVOICE
+            | &#x9;&#x9;
+            | &#x9;&#x9;
+            #identity
+                textarea#address
+                    | #{config.name}
+                    | #{config.street}
+                    | #{config.city}
+                    | #{config.phone}
+                #logo
+                    img#image(src='static/img/your-logo.png', alt='logo')
+            | &#x9;&#x9;
+            | &#x9;&#x9;
+            div(style='clear:both')
+            | &#x9;&#x9;
+            | &#x9;&#x9;
+            #customer
+                textarea#customer-title
+                    | Widget Corp.
+                    | c/o Steve Widget
+                |
+                table#meta
+                    tr
+                        td.meta-head Invoice #
+                        |
+                        td
+                            textarea 000123
+                    |
+                    tr
+                        td.meta-head Date
+                        |
+                        td
+                            textarea#date December 15, 2009
+                    |
+                    tr
+                        td.meta-head Amount Due
+                        |
+                        td
+                            .due $875.00
+            | &#x9;&#x9;
+            | &#x9;&#x9;
+            table#items
+                tr
+                    th Item
+                    | &#x9;&#x9;
+                    th Description
+                    | &#x9;&#x9;
+                    th Unit Cost
+                    | &#x9;&#x9;
+                    th Quantity
+                    | &#x9;&#x9;
+                    th Price
+                | &#x9;&#x9;
+                | &#x9;&#x9;
+                tr.item-row
+                    td.item-name
+                        .delete-wpr
+                            textarea Web Updates
+                            a.delete(href='javascript:;', title='Remove row') X
+                    | &#x9;&#x9;
+                    td.description
+                        textarea Monthly web updates for http://widgetcorp.com (Nov. 1 - Nov. 30, 2009)
+                    | &#x9;&#x9;
+                    td
+                        textarea.cost $650.00
+                    | &#x9;&#x9;
+                    td
+                        textarea.qty 1
+                    | &#x9;&#x9;
+                    td
+                        span.price $650.00
+                | &#x9;&#x9;
+                | &#x9;&#x9;
+                tr.item-row
+                    td.item-name
+                        .delete-wpr
+                            textarea SSL Renewals
+                            a.delete(href='javascript:;', title='Remove row') X
+                    | &#x9;&#x9;
+                    td.description
+                        textarea Yearly renewals of SSL certificates on main domain and several subdomains
+                    | &#x9;&#x9;
+                    td
+                        textarea.cost $75.00
+                    | &#x9;&#x9;
+                    td
+                        textarea.qty 3
+                    | &#x9;&#x9;
+                    td
+                        span.price $225.00
+                | &#x9;&#x9;
+                | &#x9;&#x9;
+                tr#hiderow
+                    td(colspan='5')
+                        a#addrow(href='javascript:;', title='Add a row') Add a row
+                | &#x9;&#x9;
+                | &#x9;&#x9;
+                tr
+                    td.blank(colspan='2')
+                    | &#x9;&#x9;
+                    td.total-line(colspan='2') Subtotal
+                    | &#x9;&#x9;
+                    td.total-value
+                        #subtotal $875.00
+                | &#x9;&#x9;
+                tr
+                    td.blank(colspan='2')
+                    | &#x9;&#x9;
+                    td.total-line(colspan='2') Total
+                    | &#x9;&#x9;
+                    td.total-value
+                        #total $875.00
+                | &#x9;&#x9;
+                tr
+                    td.blank(colspan='2')
+                    | &#x9;&#x9;
+                    td.total-line(colspan='2') Amount Paid
+                    | &#x9;&#x9;
+                    td.total-value
+                        textarea#paid $0.00
+                | &#x9;&#x9;
+                tr
+                    td.blank(colspan='2')
+                    | &#x9;&#x9;
+                    td.total-line.balance(colspan='2') Balance Due
+                    | &#x9;&#x9;
+                    td.total-value.balance
+                        .due $875.00
+            | &#x9;&#x9;
+            | &#x9;&#x9;
+            #terms
+                h5 Terms
+                | &#x9;&#x9;
+                textarea
+                    | NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.

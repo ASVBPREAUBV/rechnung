@@ -1,7 +1,8 @@
 const express = require('express');
 const pug = require('pug');
 
-const tools = require("./tools");
+const tools = require('./tools');
+const config = require('./config/config');
 
 const app = express();
 app.set('views', './src/views');
@@ -15,7 +16,7 @@ const OUTPUT_FILENAME = `filename_${Math.floor(Math.random() * 100000)}`;
 if (!PORT) throw new Error('process.env.PORT not defined');
 
 app.get('/', (req, res) => {
-    res.render('index', {head: 'TestHeader'})
+    res.render('index', {config: config})
 });
 
 app.use('/static', express.static('./src/static'));
