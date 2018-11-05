@@ -17,15 +17,17 @@ html(lang='de')
                     img#image(src='static/img/your-logo.png', alt='logo')
             #customer
                 #title
-                    p Widget Corp.
-                    p c/o Steve Widget
+                    p #{invoice.customer.project}
+                    p #{invoice.customer.customer}
+                    p #{invoice.customer.address}
+                    p #{invoice.customer.city}
                 table#meta
                     tr
-                        td.meta-head Invoice #
-                        td 000123
+                        td.meta-head Invoice &#8470
+                        td #{invoice.invoice.no}
                     tr
                         td.meta-head Date
-                        td#date December 15, 2009
+                        td#date #{date}
                     tr
                         td.meta-head Amount Due
                         td.due $875.00

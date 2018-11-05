@@ -1,14 +1,17 @@
 {
+  "invoice": {
+    "no": "inv123",
+    "notes": [
+      "NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days."
+    ]
+  },
   "customer": {
     "type": "Invoice",
     "head": "Project Invoice",
     "project": "Project Invoice",
     "customer": "Random Customer",
     "address": "Teststreet 123",
-    "city": "1234 Faketown",
-    "notes": [
-      "NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days."
-    ]
+    "city": "1234 Faketown"
   },
   "items": [
     {
