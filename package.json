@@ -12,8 +12,8 @@
   "dependencies": {
     "express": "^4.13.4",
     "moment": "^2.22.2",
-    "phantom": "^6.0.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "puppeteer": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

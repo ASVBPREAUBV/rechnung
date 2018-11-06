@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
     res.render('index', {config: config, invoice: invoice, date: date})
 });
 
+app.get('/test', (req, res) => {
+    res.send('index')
+});
+
 app.use('/static', express.static('./src/static'));
 
 app.listen(PORT, HOST);
