@@ -13,7 +13,7 @@ app.set('view engine', 'pug');
 const PORT = process.env.PORT;
 const HOST = '0.0.0.0';
 const OUTPUT_FOLDER = './public';
-const OUTPUT_FILENAME = `filename_${Math.floor(Math.random() * 100000)}`;
+const OUTPUT_FILENAME = `filename_${invoice.customer.project}_${invoice.invoice.no}`;
 const date = moment().format("DD.MM.YYYY");
 
 if (!PORT) throw new Error('process.env.PORT not defined');

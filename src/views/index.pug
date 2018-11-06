@@ -32,31 +32,30 @@ html(lang='de')
                         td.meta-head Amount Due
                         td.due $875.00
             table#items
-                tr
+                tr.table-head
                     th Item
-                    th Description
-                    th Unit Cost
-                    th Quantity
+                    th Cost
                     th Price
+                    th Subtotal
                 tr.item-row
                     td.item-name Item
-                    td.description  Monthly web updates for http://widgetcorp.com (Nov. 1 - Nov. 30, 2009)
                     td.cost $650.00
                     td.qty 1
                     td.price $650.00
-                tr
+                tr.sum-row
                     td.blank(colspan='2')
-                    td.total-line(colspan='2') Subtotal
+                    td.total-line(colspan='1') Subtotal
                     td.total-value
                         #subtotal $875.00
                 tr
                     td.blank(colspan='2')
-                    td.total-line(colspan='2') Total
+                    td.total-line(colspan='1') Total
                     td.total-value  $875.00
                 tr
                     td.blank(colspan='2')
-                    td.total-line.balance(colspan='2') Balance Due
+                    td.total-line.balance(colspan='1') Balance Due
                     td.total-value.balance.due $875.00
             #terms
                 h5 Terms
-                | NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.
+                each note in invoice.invoice.notes
+                    p #{note}
