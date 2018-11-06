@@ -37,11 +37,12 @@ html(lang='de')
                     th Cost
                     th Price
                     th Subtotal
-                tr.item-row
-                    td.item-name Item
-                    td.cost $650.00
-                    td.qty 1
-                    td.price $650.00
+                each item in invoice.items
+                    tr.item-row
+                        td.item-name #{item.desc}
+                        td.cost $#{item.price}
+                        td.qty 1
+                        td.price $650.00
                 tr.sum-row
                     td.blank(colspan='2')
                     td.total-line(colspan='1') Subtotal
