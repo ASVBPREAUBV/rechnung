@@ -33,29 +33,32 @@ html(lang='de')
                         td.due $875.00
             table#items
                 tr.table-head
+                    th Price
                     th Item
                     th Cost
-                    th Price
                     th Subtotal
+                - var subtotal = 0;
                 each item in invoice.items
                     tr.item-row
+                        td.qty #{item.number}
                         td.item-name #{item.desc}
                         td.cost $#{item.price}
-                        td.qty 1
-                        td.price $650.00
+                        td.price $#{parseFloat(item.number * item.price).toFixed(2)}
+                        - subtotal+=(item.number * item.price);
                 tr.sum-row
                     td.blank(colspan='2')
                     td.total-line(colspan='1') Subtotal
                     td.total-value
-                        #subtotal $875.00
+                        #subtotal $#{subtotal}
                 tr
                     td.blank(colspan='2')
-                    td.total-line(colspan='1') Total
-                    td.total-value  $875.00
+                    td.total-line(colspan='1') Tax
+                    td.total-value  $#{parseFloat(subtotal * config.tax).toFixed(2)}
+                    - var tax=(subtotal * config.tax);
                 tr
                     td.blank(colspan='2')
                     td.total-line.balance(colspan='1') Balance Due
-                    td.total-value.balance.due $875.00
+                    td.total-value.balance.due $#{parseFloat(subtotal + tax).toFixed(2)}
             #terms
                 h5 Terms
                 each note in invoice.invoice.notes
