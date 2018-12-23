@@ -20,5 +20,9 @@ npm run dev
 
 Preview should run on [localhost:3000](http://localhost:3000/)
 
-## Variables
+## TODO
 
+- [ ] Document all variables
+- [ ] more Templates
+- [ ] github page for examples
+- [ ] cli?
