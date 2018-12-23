@@ -21,7 +21,7 @@ const OUTPUT_FILENAME = `${invoice.customer.project}_${invoice.invoice.no}`;
 const date = moment().format("DD.MM.YYYY");
 
 // create PDF
-tools.create_pdf(OUTPUT_FOLDER, OUTPUT_FILENAME);
+tools.create_pdf(HOST, PORT, OUTPUT_FOLDER, OUTPUT_FILENAME);
 
 // serve invoice
 app.get('/', (req, res) => {

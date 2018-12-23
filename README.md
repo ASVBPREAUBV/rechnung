@@ -18,6 +18,7 @@ npm install
 npm run dev
 ```
 
-## Viewing the produced PDF
+Preview should run on [localhost:3000](http://localhost:3000/)
 
-The PDF should be created to the folder defined in index.js in the variable OUTPUT_FOLDER
+## Variables
+
