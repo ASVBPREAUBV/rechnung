@@ -23,6 +23,5 @@ Preview should run on [localhost:3000](http://localhost:3000/)
 ## TODO
 
 - [ ] Document all variables
-- [ ] more Templates
 - [ ] github page for examples
 - [ ] cli?
