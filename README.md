@@ -24,4 +24,3 @@ Preview should run on [localhost:3000](http://localhost:3000/)
 
 - [ ] Document all variables
 - [ ] github page for examples
-- [ ] cli?
