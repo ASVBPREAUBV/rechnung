@@ -1,6 +1,7 @@
 {
   "invoice": {
-    "tax": 0,
+    "currency": "$",
+    "tax": 0.19 ,
     "type": "Invoice",
     "no": "inv123",
     "head": "Project Invoice",

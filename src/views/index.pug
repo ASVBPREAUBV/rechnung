@@ -41,22 +41,22 @@ html(lang='de')
                         td.qty #{item.number}
                         td.item-name #{item.desc}
                         td.cost $#{item.price}
-                        td.price $#{parseFloat(item.number * item.price).toFixed(2)}
+                        td.price #{invoice.invoice.currency}#{parseFloat(item.number * item.price).toFixed(2)}
                         - subtotal+=(item.number * item.price);
                 tr.sum-row
                     td.blank(colspan='2')
                     td.total-line(colspan='1') Subtotal
                     td.total-value
-                        #subtotal $#{subtotal}
+                        #subtotal #{invoice.invoice.currency}#{subtotal}
                 tr
                     td.blank(colspan='2')
                     td.total-line(colspan='1') Tax
-                    td.total-value  $#{parseFloat(subtotal * config.tax).toFixed(2)}
-                    - var tax=(subtotal * config.tax);
+                    td.total-value  #{invoice.invoice.currency}#{parseFloat(subtotal * invoice.invoice.tax).toFixed(2)}
+                    - var tax=(subtotal * invoice.invoice.tax);
                 tr
                     td.blank(colspan='2')
                     td.total-line.balance(colspan='1') Balance Due
-                    td.total-value.balance.due $#{parseFloat(subtotal + tax).toFixed(2)}
+                    td.total-value.balance.due #{invoice.invoice.currency}#{parseFloat(subtotal + tax).toFixed(2)}
             #terms
                 h5 Terms
                 each note in invoice.invoice.notes
