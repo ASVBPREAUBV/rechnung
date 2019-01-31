@@ -4,9 +4,9 @@ Use HTML, CSS, JS and GIT to manage your invoices.
 
 ## Tech Stack
 
-local webserver(expressJS) publishes pug page (styled in plain CSS).
+Local webserver(expressJS) publishes pug page (styled in plain CSS).
 PDF produced by puppeteer.
-
+The content is managed in JSON.
 
 
 ## How it works
