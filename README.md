@@ -2,6 +2,13 @@
 
 Use HTML, CSS, JS and GIT to manage your invoices.
 
+## Tech Stack
+
+local webserver(expressJS) publishes pug page (styled in plain CSS).
+PDF produced by puppeteer.
+
+
+
 ## How it works
 
 rechnung-pdf is a webpage.
