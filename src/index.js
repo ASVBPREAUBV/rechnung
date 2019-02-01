@@ -5,7 +5,7 @@ const moment = require('moment');
 
 // internal dependenies
 const tools = require('./tools');
-const config = require('./config/config');
+const config = require('./config/companyAddress');
 const invoice = require('./config/invoices/customer');
 
 // express setup
